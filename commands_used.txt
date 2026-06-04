@@ -1,0 +1,27 @@
+The following commands were used:
+
+* Check firewall status:
+sudo pfctl -s info
+
+* List current firewall rules:
+sudo pfctl -s rules
+
+* Open PF configuration file:
+sudo nano /etc/pf.conf
+
+Add rule to block port 23 (Telnet):
+block in proto tcp from any to any port 23
+
+* Reload firewall rules:
+sudo pfctl -f /etc/pf.conf
+
+* Enable PF firewall:
+sudo pfctl -e
+
+* Test firewall rule:
+nc -vz localhost 23
+
+* Remove test rule and restore system:
+
+sudo nano /etc/pf.conf
+sudo pfctl -f /etc/pf.conf

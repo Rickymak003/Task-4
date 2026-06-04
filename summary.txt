@@ -1,0 +1,5 @@
+A firewall filters network traffic by monitoring incoming and outgoing data packets and applying a set of predefined rules. Each packet is checked based on parameters such as source IP address, destination IP address, port number, and protocol (TCP/UDP).
+
+If a packet matches an “allow” rule, it is permitted to pass through the network. If it matches a “block/deny” rule, it is dropped or rejected, preventing access to the system or service.
+
+In this task, a rule was configured to block inbound traffic on port 23 (Telnet). As a result, any connection attempts to that port were automatically denied by the firewall. This demonstrates how firewalls enhance security by controlling access to network services and preventing unauthorized communication.
